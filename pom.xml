@@ -5,7 +5,7 @@
     <artifactId>raviLogin</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>Account Registration Webapp</name>
+    <name>Account RaviWebapp</name>
     <url>http://maven.apache.org</url>
     <properties>
         <spring.version>4.2.0.RELEASE</spring.version>
