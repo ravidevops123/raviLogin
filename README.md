@@ -1,3 +1,1 @@
-poll scm testing
-webhooks
-day builds
+deploy to container testing
