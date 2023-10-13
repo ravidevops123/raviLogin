@@ -1,1 +1,1 @@
-poll scm option
+git webhooks option
