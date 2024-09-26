@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+      stages{
+          stage('clone'){
+              steps{
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravidevops123/raviLogin.git']])
+              }
+          }
+          stage('build'){
+              steps{
+                  sh 'mvn package'
+              }
+          }
+          stage('deploy to tomcat'){
+              steps{
+                deploy adapters: [tomcat9(credentialsId: 'deployer', path: '', url: 'http://52.206.240.65:8080')], contextPath: null, war: '**/*.war'  
+              }
+          }
+      }
+      
+}
